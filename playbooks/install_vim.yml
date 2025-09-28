@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update respository index
+    apt:
+      update_cache: yes
+    when: ansible_distribution in ["Ubuntu", "Debian"]
+
+  - name: install vim package
+    apt:
+      name: vim-nox
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: add php support for apache
+    apt: 
+      name: libapache2-mod-php
+      state: absent   # to uninstall the package
+    when: ansible_distribution == "Ubuntu"
+
+  - name: update respository index
+    dnf:
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
