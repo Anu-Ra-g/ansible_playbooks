@@ -14,3 +14,4 @@ Resources gathered while learning Ansible. I'm using ansible from a virtual envi
 7. `ansible  all -m apt -a name=openvpn --become --ask-become-pass`
 8. `ansible all -m apt -a "name=dpkg state=latest" --become --ask-become-pass` (upgrade a package in the target node)
 9. `ansible all -m apt -a "upgrade=dist" --become --ask-become-pass` (to install all the package updates)
+10. `ansible-playbook --ask-become-pass playbooks/install_apache.yml` (running a playbook with path to it)
