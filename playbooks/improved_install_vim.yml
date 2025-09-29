@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install vim and php packages
+    package:     # automatic includes the package manager
+      name: 
+      - "{{ vim_package }}"  # variables mentioned in inventory
+      - "{{ php_package }}"
+      state: latest
+      update_cache: yes

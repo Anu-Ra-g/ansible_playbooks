@@ -1,1 +1,1 @@
-192.168.0.118 ansible_user=tracxn-lp-737
+192.168.0.118 ansible_user=tracxn-lp-737 vim_package=vim-nox php_package=libapache2-mod-php
