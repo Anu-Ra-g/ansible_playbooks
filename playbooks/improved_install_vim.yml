@@ -8,6 +8,6 @@
     package:     # automatic includes the package manager
       name: 
       - "{{ vim_package }}"  # variables mentioned in inventory
-      - "{{ php_package }}"
+      - "{{ php_package }}"  # package name should be specific to the distro
       state: latest
       update_cache: yes
