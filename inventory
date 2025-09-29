@@ -1,1 +1,11 @@
 192.168.0.118 ansible_user=tracxn-lp-737 vim_package=vim-nox php_package=libapache2-mod-php
+
+[web_servers]
+172.16.250.132
+172.16.250.248
+
+[db_servers]
+172.16.250.133
+
+[file_servers]
+172.16.250.134
