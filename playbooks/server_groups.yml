@@ -39,7 +39,7 @@
   become: true
   tasks: 
 
-  - name: install vim and php packages for Ubuntu servers
+  - name: install apache and php packages for Ubuntu servers
     tags: apache,apache2,ubuntu  # you can whatever tags you want
     apt:     
       name: 
@@ -48,7 +48,7 @@
       state: latest
     when: ansible_distribution == "Ubuntu"
 
-  - name: install vim and php packages for CentOS
+  - name: install apache and php packages for CentOS
     tags: apache,httpd,centos
     dnf:
       name: 
