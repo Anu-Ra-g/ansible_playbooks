@@ -5,7 +5,7 @@ Resources gathered while learning Ansible. I'm using ansible from a virtual envi
 
 ## Commands that I've used in the course:
 
-1. `ansible all --key-file ~/.ssh/ansible -i inventory -m ping`
+1. `ansible all --key-file ~/.ssh/ansible -i inventory -m ping` (specified the path to public key if not in configuration)
 2. `ansible all --list-hosts`
 3. `ansible all -m gather_facts`
 4. `ansible all -m gather_facts --limit 192.168.0.118` (to limit the host options)
