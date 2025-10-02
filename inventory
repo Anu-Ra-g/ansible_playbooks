@@ -9,3 +9,6 @@
 
 [file_servers]
 172.16.250.134
+
+[workstations]
+172.17.250.13

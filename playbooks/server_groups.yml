@@ -18,6 +18,23 @@
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
+- hosts: workstations
+  become: true
+  tasks:
+
+    - name: install unzip
+      package:
+        name: unzip
+
+    - name: install terraform
+      unarchive:
+        src: https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.28_linux_amd64.zip
+        dest: /usr/local/bin
+        remote_src: yes  # to tell ansible use a remote source as in the above url
+        owner: root
+        group: root
+        mode: 0755 
+
 - hosts: web_servers   # run this task only against "web_servers"
   become: true
   tasks: 
