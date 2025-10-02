@@ -22,3 +22,4 @@ Resources gathered while learning Ansible. I'm using ansible from a virtual envi
 
 ## Notes:
 > `gather_facts` is a default task that runs at the start of every play, unless you explicitly disable it.`
+> Ansible playbooks are idempotent i.e. running a playbook multiple times will not change the state of the managed servers
