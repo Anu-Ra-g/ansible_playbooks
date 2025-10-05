@@ -7,7 +7,7 @@ Resources gathered while learning Ansible. I'm using ansible from a virtual envi
 
 1. `ansible all --key-file ~/.ssh/ansible -i inventory -m ping` (specified the path to public key if not in configuration)
 2. `ansible all --list-hosts`
-3. `ansible all -m gather_facts`
+3. `ansible all -m gather_facts` (here we're not playing any playbook)
 4. `ansible all -m gather_facts --limit 192.168.0.118` (to limit the host options)
 5. `ansible all -m apt -a update_cache=true` (without sudo privilieges)
 6. `ansible all -m apt -a update_cache=true --become --ask-become-pass` (--ask-become-pass if you don’t have passwordless sudo set up and --become to use sudo)
