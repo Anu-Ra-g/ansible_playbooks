@@ -57,7 +57,7 @@
       state: latest
     when: ansible_distribution == "CentOS"
 
-  - name: start httpd (CentOS)
+  - name: start httpd (CentOS)  # unlike in ubuntu, services don't get "enabled" automatically in centos
     tags: apache,centos,httpd
     service:
       name: httpd
